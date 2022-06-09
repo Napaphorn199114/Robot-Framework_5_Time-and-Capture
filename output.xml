@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220609 10:15:41.009" rpa="false" schemaversion="3">
+<suite id="s1" name="Get Date" source="D:\Advance_Robot_Python\Robot Framework_5_Time and Capture\get_date.robot">
+<test id="s1-t1" name="Get Date and Time" line="8">
+<kw name="Get Time" library="BuiltIn">
+<var>${time}</var>
+<doc>Returns the given time in the requested format.</doc>
+<msg timestamp="20220609 10:15:41.426" level="INFO">${time} = 2022-06-09 10:15:41</msg>
+<status status="PASS" starttime="20220609 10:15:41.425" endtime="20220609 10:15:41.426"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220609 10:15:41.427" endtime="20220609 10:15:41.428"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${date_time}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220609 10:15:41.429" level="INFO">${date_time} = 2022-06-09 10:15:41.428</msg>
+<status status="PASS" starttime="20220609 10:15:41.428" endtime="20220609 10:15:41.429"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${date_time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220609 10:15:41.429" endtime="20220609 10:15:41.429"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${date_time}</var>
+<arg>${date_time}</arg>
+<arg>result_format=%d-%m-%Y %H-%M-%S</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20220609 10:15:41.434" level="INFO">${date_time} = 09-06-2022 10-15-41</msg>
+<status status="PASS" starttime="20220609 10:15:41.430" endtime="20220609 10:15:41.434"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n${date_time}\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220609 10:15:41.435" endtime="20220609 10:15:41.436"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${date_time}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220609 10:15:41.437" level="INFO">${date_time} = 09-06-2022 10-15-41</msg>
+<status status="PASS" starttime="20220609 10:15:41.436" endtime="20220609 10:15:41.437"/>
+</kw>
+<status status="PASS" starttime="20220609 10:15:41.424" endtime="20220609 10:15:41.437"/>
+</test>
+<test id="s1-t2" name="Capture JPG" line="17">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://robotframework.org/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220609 10:15:41.441" level="INFO">Opening browser 'Chrome' to base url 'https://robotframework.org/'.</msg>
+<status status="PASS" starttime="20220609 10:15:41.441" endtime="20220609 10:15:45.877"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220609 10:15:45.877" endtime="20220609 10:15:46.320"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220609 10:15:46.322" endtime="20220609 10:15:46.323"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>D:\\Advance_Robot_Python\\Robot Framework_5_Time and Capture/Capture-${date_time}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220609 10:15:46.967" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Capture-09-06-2022%2010-15-41.png"&gt;&lt;img src="Capture-09-06-2022%2010-15-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220609 10:15:46.323" endtime="20220609 10:15:46.968"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>%{userprofile}/Capture-${date_time}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220609 10:15:47.465" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="file:///C:/Users/Napaphorn/Capture-09-06-2022%2010-15-41.png"&gt;&lt;img src="file:///C:/Users/Napaphorn/Capture-09-06-2022%2010-15-41.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220609 10:15:46.969" endtime="20220609 10:15:47.465"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Capture-${date_time}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220609 10:15:47.466" endtime="20220609 10:15:47.467"/>
+</kw>
+<status status="PASS" starttime="20220609 10:15:41.439" endtime="20220609 10:15:47.467"/>
+</test>
+<status status="PASS" starttime="20220609 10:15:41.011" endtime="20220609 10:15:47.469"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Get Date">Get Date</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
