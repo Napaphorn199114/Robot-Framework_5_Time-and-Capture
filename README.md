@@ -3,4 +3,13 @@
 
 #Screen capture and specify time
 
-#Library    DateTime , Selenium2Library , BuiltIn , openpyxl
+#Library  DateTime 
+การจัดการเรื่องของเวลา,วัน keyword:Get Time , Get Current Date , Convert Date
+
+#Library  BuiltIn
+keyword:Set Global Variable
+
+#Library  Selenium2Library
+การเก็บภาพผลเทส Keyword:Capture Page Screenshot
+
+
